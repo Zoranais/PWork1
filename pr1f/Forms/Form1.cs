@@ -61,5 +61,12 @@ namespace pr1f
             form.Show();
             this.Hide();
         }
+
+        private void unitTestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new UnitTestForm();
+            form.Show();
+            this.Hide();
+        }
     }
 }

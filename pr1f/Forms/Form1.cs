@@ -1,4 +1,6 @@
-﻿using System;
+﻿using pr1f.Forms;
+using pr1f.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +46,20 @@ namespace pr1f
                 dataGridView1.Rows.Add(Math.Round(tabul.Xy[i, 0], 2), Math.Round(tabul.Xy[i, 1], 3));
                 chart1.Series[0].Points.AddXY(tabul.Xy[i, 0], tabul.Xy[i, 1]);
             }
+        }
+
+        private void ArrayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new ArrayForm();
+            form.Show();
+            this.Hide();
+        }
+
+        private void TwoDimensionalArraysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new TwoDimmensionalArrayForm();
+            form.Show();
+            this.Hide();
         }
     }
 }

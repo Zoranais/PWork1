@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.x = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,20 +43,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.масивиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TwoDimensionalArraysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Location = new System.Drawing.Point(451, 209);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Name = "Series2";
-            this.chart1.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "Series2";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(632, 493);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -77,17 +82,20 @@
             // 
             // x
             // 
+            this.x.FillWeight = 50F;
             this.x.HeaderText = "x";
             this.x.MinimumWidth = 9;
             this.x.Name = "x";
-            this.x.Width = 175;
+            this.x.ReadOnly = true;
+            this.x.Width = 50;
             // 
             // y
             // 
+            this.y.FillWeight = 50F;
             this.y.HeaderText = "y";
             this.y.MinimumWidth = 9;
             this.y.Name = "y";
-            this.y.Width = 175;
+            this.y.Width = 50;
             // 
             // xn_input
             // 
@@ -168,6 +176,41 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "a";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.масивиToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1095, 38);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // масивиToolStripMenuItem
+            // 
+            this.масивиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ArrayToolStripMenuItem,
+            this.TwoDimensionalArraysToolStripMenuItem});
+            this.масивиToolStripMenuItem.Name = "масивиToolStripMenuItem";
+            this.масивиToolStripMenuItem.Size = new System.Drawing.Size(106, 34);
+            this.масивиToolStripMenuItem.Text = "Масиви";
+            // 
+            // ArrayToolStripMenuItem
+            // 
+            this.ArrayToolStripMenuItem.Name = "ArrayToolStripMenuItem";
+            this.ArrayToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
+            this.ArrayToolStripMenuItem.Text = "Одновимірні";
+            this.ArrayToolStripMenuItem.Click += new System.EventHandler(this.ArrayToolStripMenuItem_Click);
+            // 
+            // TwoDimensionalArraysToolStripMenuItem
+            // 
+            this.TwoDimensionalArraysToolStripMenuItem.Name = "TwoDimensionalArraysToolStripMenuItem";
+            this.TwoDimensionalArraysToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
+            this.TwoDimensionalArraysToolStripMenuItem.Text = "Двовимірні";
+            this.TwoDimensionalArraysToolStripMenuItem.Click += new System.EventHandler(this.TwoDimensionalArraysToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -184,10 +227,14 @@
             this.Controls.Add(this.xn_input);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chart1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,8 +244,6 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn x;
-        private System.Windows.Forms.DataGridViewTextBoxColumn y;
         private System.Windows.Forms.TextBox xn_input;
         private System.Windows.Forms.TextBox xk_input;
         private System.Windows.Forms.TextBox h_input;
@@ -208,6 +253,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn x;
+        private System.Windows.Forms.DataGridViewTextBoxColumn y;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem масивиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ArrayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TwoDimensionalArraysToolStripMenuItem;
     }
 }
 

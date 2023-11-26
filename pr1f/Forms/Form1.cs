@@ -68,5 +68,19 @@ namespace pr1f
             form.Show();
             this.Hide();
         }
+
+        private void sOLIDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new ArrayToFileForm();
+            form.Show();
+            this.Hide();
+        }
+
+        private void interfacesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new DefaultInterfacesForm();
+            form.Show();
+            this.Hide();
+        }
     }
 }

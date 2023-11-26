@@ -38,12 +38,17 @@ namespace pr1f.Forms
                 var solver = new ArraySolver(values);
 
                 Result.Text = string.Join(" ", solver.GetPows());
-                ResultSqrt.Text = string.Join(" ", solver.GetSqrts());
+                ResultSqrt.Text = string.Join(" ", solver.GetSqrts()).Replace("NaN", "Від'ємне значення");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
